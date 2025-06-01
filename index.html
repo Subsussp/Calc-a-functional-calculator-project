@@ -75,8 +75,8 @@
    </div>
     <script>
       let buttons = document.querySelectorAll(".nbtn");
-      let userinput = document.getElementById("EQ");
-      let userbutton = document.getElementById("button");
+      // let userinput = document.getElementById("EQ");
+      // let userbutton = document.getElementById("button");
       const display = document.getElementById("display");
       const form = document.getElementById("label");
       const deleteButton = document.getElementById("del");
@@ -85,14 +85,14 @@
       let hold = document.getElementById('hold') 
       let expression = [''];
       expression = [form.innerHTML]
-      userbutton.addEventListener('click',()=>{
-        console.log('clicked')
-        if(userinput.value){
-          let result = evaluateExpression([userinput.value.toString()])
-          form.innerHTML = result[0]
-        }
-        return
-      })
+      // userbutton.addEventListener('click',()=>{
+      //   console.log('clicked')
+      //   if(userinput.value){
+      //     let result = evaluateExpression([userinput.value.toString()])
+      //     form.innerHTML = result[0]
+      //   }
+      //   return
+      // })
       deleteButton.onclick = function () {
         expression[expression.length - 1] = expression[expression.length - 1].slice(0, -1);
         let newdata = form.innerHTML.slice(0, -1);
