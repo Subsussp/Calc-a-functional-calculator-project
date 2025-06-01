@@ -4,13 +4,45 @@
     box-sizing: border-box;
 }body {
     min-height: 100vh;
-    background: white;
+    background: #003049;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 .nbtn{
     color: #878E99; 
+}
+.eqa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+}
+#EQ{
+    position: relative;
+    width: 160px;
+    background-color: aliceblue;
+    padding: 5px 2px;
+    height: 30px;
+    border: #878E99;
+    user-select: none;
+    outline: none;
+}
+#button{
+    outline: none;
+    border: none;
+    user-select: none;
+    height: 30px;
+    text-align: center;
+    background-color: azure;
+    font-size: 20px;
+    margin-top: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 80px;
 }
 .calculator {
     width: 300px;
@@ -19,19 +51,24 @@
     flex-direction: row;
     box-shadow: 4px 4px 30px rgba(0,0,0,0.2);
     border-radius: 12px;
-    background: #000000;
+    /* background: #000000; */
     overflow: hidden;
 }
 .btn-yellow {
-    background: #fca211;
+    background: #415a77;
     color: white;
+}
+.first{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .btn-grey {
-    background-color: #313131; 
-    color: white;
+    background-color: white; 
+    color: black;
 }
 .btn-equal {
-    background-color: #3a5a40;
+    background-color: #1b263b;
     color: white;
 }
 .btn-clear {
@@ -48,23 +85,38 @@
 }
 #hold{
     position: relative;
-    padding: 1rem;
-    font-size: 2rem;
-    border-radius: 12px;
-    width: 20px;
-    height: 50px;
+    text-align: center;
+    justify-content: center;
+    text-overflow: clip;
+    padding: .2rem .3rem;
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 35px 0 0 0 ;
+    width: 50px;
+    height: 20px;
 }
 #real{
-    width: 70%;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+    justify-content: center;
+    justify-items: center;
+    position: absolute;
 }
 button:hover {
     transform: scale(1.1);
     transition-duration: 500ms;
 }
 #label {
-    transform: translate(-70px,30px);
-    height:80px;
-    width: 400px;
+    transform: translate(0px,30px);
+    height:70px;
+    width: 370px;
     scale: 0.8;
     border: none;
     border-radius: 12px;
@@ -72,8 +124,9 @@ button:hover {
     padding: 1rem;
     color: #000000;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: #A2C5AC;
+    background: #669bbc;
     text-align: right;
+    box-shadow: #669bbc 2px 4px 2px 2px;
     /* pointer-events: none; */
 }
 button {
