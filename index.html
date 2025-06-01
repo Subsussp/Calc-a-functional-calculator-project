@@ -7,11 +7,20 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- <div class="eqa">
+      <input type="text" id="EQ" placeholder="Enter Your Equation">
+      <input type="button" id="button" value="Send">
+    </div> -->
     <div id="real">
     <div id="label"></div>
     <div id="hold"></div>
     <section class="calculator">
       <div id="contain">
+        <div class="first ">
+        <button type="button" id="clear" class="btn btn-clear">AC</button>
+        <button type="button" id="del" class="btn btn-clear">DEL</button>
+        <button type="button" class="btn btn-equal" id="equal">=</button>
+        </div>
         <button class="nbtn btn-grey" type="button" data-num="1" name="1">
           1
         </button>
@@ -61,14 +70,13 @@
         >
           ÷
         </button>
-        <button type="button" id="clear" class="btn btn-clear">AC</button>
-        <button type="button" id="del" class="btn btn-clear">DEL</button>
-        <button type="button" class="btn btn-equal" id="equal">=</button>
       </div>
     </section>
-  </div>
+   </div>
     <script>
       let buttons = document.querySelectorAll(".nbtn");
+      let userinput = document.getElementById("EQ");
+      let userbutton = document.getElementById("button");
       const display = document.getElementById("display");
       const form = document.getElementById("label");
       const deleteButton = document.getElementById("del");
@@ -77,7 +85,14 @@
       let hold = document.getElementById('hold') 
       let expression = [''];
       expression = [form.innerHTML]
-
+      userbutton.addEventListener('click',()=>{
+        console.log('clicked')
+        if(userinput.value){
+          let result = evaluateExpression([userinput.value.toString()])
+          form.innerHTML = result[0]
+        }
+        return
+      })
       deleteButton.onclick = function () {
         expression[expression.length - 1] = expression[expression.length - 1].slice(0, -1);
         let newdata = form.innerHTML.slice(0, -1);
